@@ -21,8 +21,8 @@ intensity(X, ...)
 \details{
   This is a generic function for computing the intensity of a spatial dataset
   or spatial point process model. There are methods for point patterns
-  (objects of class \code{"ppp"}) and fitted point process models
-  (objects of class \code{"ppm"}).
+  (objects of class \code{"ppp"}), fitted point process models
+  (objects of class \code{"ppm"}) and point process models  (objects of class \code{"interact"}).
   
   The empirical intensity of a dataset is the average density
   (the average amount of \sQuote{stuff} per unit area or volume).
@@ -32,14 +32,16 @@ intensity(X, ...)
   The theoretical intensity of a stochastic model is the expected density
   (expected  amount of \sQuote{stuff} per unit area or volume).
   The theoretical intensity of a fitted point process model is computed by the
-  method \code{\link[spatstat.core]{intensity.ppm}}.
+  method \code{\link[spatstat.core]{intensity.ppm}}. The theoretical intensity of a pairwise interaction point process model is computed by the
+  method \code{\link[spatstat.core]{intensity.interact}}. 
 }
 \value{
   Usually a numeric value or vector.
 }
 \seealso{
   \code{\link{intensity.ppp}},
-  \code{\link[spatstat.core]{intensity.ppm}}.
+  \code{\link[spatstat.core]{intensity.ppm}},
+  \code{\link[spatstat.core]{intensity.interact}}.
 }
 \author{\adrian
   
